@@ -9,6 +9,7 @@ namespace SensorClient
     {
         static void Main(string[] args)
         {
+
             NetTcpBinding binding = new NetTcpBinding();
 
             EndpointAddress address =
