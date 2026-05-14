@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SensorClient/SensorClient.csproj" Id="5ed7093a-ad7c-4717-9d61-5a1a15e12350" />
+  <Project Path="SensorContracts/SensorContracts.csproj" Id="74b6300b-cbf0-495e-9016-9385ce9d8dbd" />
+  <Project Path="SensorService/SensorServiceHost.csproj" Id="2c3c7e15-4929-4629-a900-d6d87abcf51b" />
+</Solution>
