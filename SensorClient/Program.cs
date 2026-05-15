@@ -39,10 +39,18 @@ namespace SensorClient
             Console.WriteLine("Broj ucitanih redova: " + samples.Count);
             foreach (SensorSample sample in samples)
             {
-                TransferStatus sampleResponse =
-                    client.PushSample(sample);
-
-                Console.WriteLine(sampleResponse.Message);
+                try
+                {
+                    TransferStatus sampleResponse =
+                        client.PushSample(sample);
+                    Console.WriteLine(sampleResponse.Message);
+                }
+                catch (FaultException<ValidationFault> ex)
+                {
+                    Console.WriteLine("VALIDATION FAULT:");
+                    Console.WriteLine(ex.Detail.Reason);
+                    Console.WriteLine(ex.Detail.FieldName);
+                }
             }
 
             TransferStatus endResponse = client.EndSession();

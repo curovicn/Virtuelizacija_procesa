@@ -9,6 +9,7 @@ namespace SensorContracts
         TransferStatus StartSession(SessionMeta meta);
 
         [OperationContract]
+        [FaultContract(typeof(ValidationFault))]
         TransferStatus PushSample(SensorSample sample);
 
         [OperationContract]

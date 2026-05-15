@@ -49,6 +49,8 @@
     <Compile Include="SensorSample.cs" />
     <Compile Include="SessionMeta.cs" />
     <Compile Include="TransferStatus.cs" />
+    <Compile Include="ValidationFault.cs" />
+    <Compile Include="ValidationFault.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
